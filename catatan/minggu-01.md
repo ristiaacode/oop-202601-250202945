@@ -1,21 +1,21 @@
 # Catatan Minggu 1: Paradigma Pemrograman dan Setup
 
 ## Yang saya kerjakan
-Melakukan setup environment untuk memasang JDK 21 dan Apache Maven serta mengkonfigurasi variabel lingkungannya, kemudian saya mengisi nama dan nim pada file mahasiswa.properties. Juga melengkapi implementasi program sapaan menggunakan tiga paradigma pemrograman berbeda di Java, yaitu prosedural, Object-Oriented Programming (OOP), dan fungsional. Setelah itu menguji seluruh fungsi program menggunakan script pengujian yang disediakan.
+Minggu ini saya menyiapkan environment development dengan mengunduh dan mengonfigurasi JDK 21 serta Apache Maven. Kemudian dilanjut dengan memperbarui file `mahasiswa.properties` dengan memasukkan nama dan NIM saya. Saya menyelesaikan tugas membuat program sapaan di Java menggunakan tiga paradigma berbeda yaitu, prosedural, OOP, dan fungsional. Terakhir, saya menguji semua fungsi program dengan script yang telah disediakan.
 
 ## Keputusan desain
-Saya memutuskan untuk membuat format kalimat sapaan yang konsisten di ketiga kelas paradigma, yaitu `"Halo, " + nama + "(" + nim + ") selamat datang di Aset-Pinjam!"` agar lulus dalam pengujian. 
+Supaya lolos unit test, saya menyamakan format output sapaan di ketiga paradigma menjadi, `"Halo, " + nama + "(" + nim + ") selamat datang di Aset-Pinjam!"`.
 
 ## Kendala
-Saat konfigurasi Environment Variables (PATH) untuk JDK 21 dan Maven, terminal sempat tidak mengenali perintah `mvn` karena variabel mengarah ke lokasi shortcut (`javapath`) dan folder yang salah. Saya mengatasinya dengan melacak direktori asli instalasi JDK dan Maven di `Program Files`, memperbarui `JAVA_HOME` dan `MAVEN_HOME`, serta membuka kembali terminal baru agar perubahan konfigurasi dimuat dengan benar.
+Terminal sempat tidak mengenali perintah `mvn` saat setup Environment Variables. Ternyata PATH saya malah mengarah ke folder shortcut (`javapath`), bukan ke folder instalasi aslinya. Masalah ini selesai setelah saya pathing ulang `JAVA_HOME` dan `MAVEN_HOME` langsung ke lokasi instalasi di `Program Files`, lalu me-restart terminal.
 
 ## Penggunaan AI
 - Alat yang dipakai: Gemini
-- Bagian yang dibantu AI: Setup Environment (JDK 21 & Maven),penjelasan ketiga kelas paradigma
+- Bagian yang dibantu AI: Setup Environment (JDK 21 & Maven) dan penjelasan dari ketiga kelas paradigma.
 - Prompt utama:
 1. "bagaimana cara setup maven"
-2. "penjelasan mengenai ketiga kelas paradigma"
+2. "penjelasan mengenai ketiga kelas paradigma pemrograman dan setup"
 - Yang saya ubah atau tolak dari saran AI, dan alasannya:
-Saya menyesuaikan format kalimat sapaan pada kode Java agar tetap ringkas.
+Untuk minggu ini, penjelasan dari AI sudah tepat. Saya hanya menyesuaikan format kalimat sapaan pada kode Java agar tetap ringkas.
 - Satu hal yang saya pahami lebih baik sekarang:
-Saya memahami perbedaan mendasar antara tiga paradigma di Java (prosedural, OOP, dan fungsional), terutama bagaimana ekspresi lambda pada gaya fungsional dapat mengembalikan fungsi sebagai nilai tanpa perlu membuat kelas pembungkus secara manual seperti pada OOP.
+Saya jadi lebih paham mengenai perbedaan mendasar dari ketiga paradigma di Java terutama bagaimana ekspresi lambda di paradigma fungsional bisa melempar fungsi sebagai nilai tanpa harus membuat kelas pembungkus secara manual seperti di OOP.
